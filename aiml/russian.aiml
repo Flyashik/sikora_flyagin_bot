@@ -1,0 +1,633 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<?aiml version = "1.0.1" encoding = "UTF-8"?>
+<!-- ACQUAINTANCE -->
+
+<aiml>
+  <category>
+    <pattern>_ меня зовут *</pattern>
+    <template>
+        <srai>меня зовут <star/></srai>
+    </template>
+  </category>
+  
+  <category>
+    <pattern>меня зовут *</pattern>
+    <template>
+      <random>
+        <li>Здравствуйте, <set name="user-name"><star /></set>!
+        </li>
+        <li>Добро пожаловать, <set name="user-name"><star /></set>!
+        </li>
+      </random>
+    </template>
+  </category>
+
+  <category>
+    <pattern>кто ты</pattern>
+    <template>
+      <random>
+        <li>Я бот, который скоро будет распознавать изображения, <get name="user-name" />!</li>
+      </random>
+    </template>
+  </category>
+  
+  <category>
+    <pattern>РАССКАЖИ О СЕБЕ</pattern>
+    <template>
+      <srai>кто ты</srai>
+    </template>
+  </category>
+  
+  <category>
+    <pattern>как меня зовут</pattern>
+    <template>Забыли что-ли? Вас зовут <get name="user-name"/>!</template>
+  </category>
+  
+  <category>
+    <pattern>Привет</pattern>
+    <template> 
+      <srai>кто ты</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>Кря *</pattern>
+    <template>
+      <srai>Кря</srai>
+    </template>
+  </category>
+  
+  <category>
+    <pattern>_ Кря *</pattern>
+    <template>
+      <srai>Кря</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>_ Кря</pattern>
+    <template>
+      <srai>Кря</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>Кря</pattern>
+    <template>
+      <random>
+        <li>Кря</li>
+        <li>Кря Кря</li>
+        <li>Кря Кря Кря</li>
+        <li>Кря!</li>
+        <li>Кря Кря!</li>
+        <li>Кря Кря Кря!</li>
+        <li>Кря?</li>
+        <li>Кря Кря?</li>
+        <li>Кря Кря Кря?</li>
+        <li>Кря, <get name="user-name" /></li>
+        <li>Кря Кря, <get name="user-name" /> </li>
+        <li>Кря Кря Кря, <get name="user-name" /> </li>
+        <li>Кря, <get name="user-name" />!</li>
+        <li>Кря Кря, <get name="user-name" />!</li>
+        <li>Кря Кря Кря, <get name="user-name" />!</li>
+        <li>Кря, <get name="user-name" />?</li>
+        <li>Кря Кря, <get name="user-name" />?</li>
+        <li>Кря Кря Кря, <get name="user-name" />?</li>
+      </random>
+    </template>
+  </category>
+
+  <category>
+    <pattern>Что ты умеешь</pattern>
+    <template>
+      Пока что я умею только немножко общаться
+    </template>
+  </category>
+  
+  <category>
+    <pattern>Аудио</pattern>
+    <template>Жаль, я не умею слушать</template>
+  </category>
+  <category>
+    <pattern>Видео</pattern>
+    <template>Спасибо, но, кажется, у меня сломалась кнопка запуска</template>
+  </category>
+  
+  <category>
+    <pattern>*</pattern>
+    <template>Я такое не знаю, <get name="user-name"/></template>
+  </category>
+  
+  <category>
+    <pattern>Ты умеешь говорить</pattern>
+    <template>Пока что я только учусь:)</template>
+  </category>
+  
+  <category>
+    <pattern>Кто такой Алан Тьюринг</pattern>
+    <template>
+      Алан Мэтисон Тьюринг - английский математик, логик, криптограф, оказавший существенное влияние на развитие информатики. Кавалер Ордена Британской империи , член Лондонского королевского общества
+    </template>
+  </category>
+
+  <category>
+    <pattern>Кто такой Альберт Эйнштейн</pattern>
+    <template>
+      Альберт Эйнштейн - физик-теоретик, один из основателей современной теоретической физики, лауреат Нобелевской премии по физике 1921 года, общественный деятель-гуманист
+    </template>
+  </category>
+  
+  <category>
+    <pattern> Кто такой * </pattern>
+    <template>
+      <srai> Кто такой <star/> </srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>Хватит</pattern>
+    <template>Хорошо&#33; хотите поговорить о чем&#45;то еще&#63;</template>
+  </category>
+
+  <category>
+    <pattern>Да</pattern>
+    <that>Хорошо&#33; хотите поговорить о чем&#45;то еще&#63;</that>
+    <template>Ура! Тогда спросите о чем-то</template>
+  </category>
+
+  <category>
+    <pattern>Нет</pattern>
+    <that>Хорошо&#33; хотите поговорить о чем&#45;то еще&#63;</that>
+    <template>Чтож...Буду ждать...</template>
+  </category>
+
+  <category>
+    <pattern>Хватит *</pattern>
+    <template>
+      <srai>Хватит</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>_ хватит</pattern>
+    <template>
+      <srai>Хватит</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>_ хватит *</pattern>
+    <template>
+      <srai>Хватит</srai>
+    </template>
+  </category>
+  
+  <category>
+    <pattern>Какие образы способна распознавать нейросеть</pattern>
+    <template>Нейросеть способна распознавать образы символов кнопок медиаплеера </template>
+  </category>
+
+  <category>
+    <pattern>Какие есть кнопки у медиаплеера</pattern>
+    <template>Обычно при просмотре видео или прослушивании аудио есть кнопки Play, Pause, Stop, Volume, Next, Prev</template>
+  </category>
+
+  <category>
+    <pattern>А что за кнопки</pattern>
+    <template>
+      <srai>Какие есть кнопки у медиаплеера</srai>
+    </template>
+  </category>
+  
+  <category>
+    <pattern>Расскажи о кнопке *</pattern>
+    <template>Кнопка <set name ="topic"><star/> - это кнопка медиаплеера</set></template>
+  </category>
+
+  <topic name="Play">
+    <category>
+      <pattern>Подробнее</pattern>
+      <template>Кнопка Play отвечает за запуск медиаматериала</template>
+    </category>
+
+    <category>
+      <pattern>_ подробнее</pattern>
+      <template>
+        <srai>Подробнее</srai>
+      </template>
+    </category>
+
+    <category>
+      <pattern>Подробнее *</pattern>
+      <template>
+        <srai>Подробнее</srai>
+      </template>
+    </category>
+
+    <category>
+      <pattern>_ подробнее *</pattern>
+      <template>
+        <srai>Подробнее</srai>
+      </template>
+    </category>
+
+    <category>
+      <pattern>Еще</pattern>
+      <template>
+        <random>
+          <li>Эта кнопка имеет форму треугольника направленного вправо</li>
+          <li>Изначально эта кнопка имела форму треугольника, направленного вверх</li>
+          <li>Впервые эта кнопка появилась на магнитофоне Philips</li>
+        </random>
+      </template>
+    </category>
+
+    <category>
+      <pattern>_ еще</pattern>
+      <template>
+        <srai>Еще</srai>
+      </template>
+    </category>
+
+    <category>
+      <pattern>Еще *</pattern>
+      <template>
+        <srai>Еще</srai>
+      </template>
+    </category>
+
+    <category>
+      <pattern>_ еще *</pattern>
+      <template>
+        <srai>Еще</srai>
+      </template>
+    </category>
+
+    <category>
+      <pattern>А о чем мы говорим</pattern>
+      <template>
+        <random>
+          <li>Ну вы даете! Мы говорим о кнопке Play</li>
+          <li>Мы говорим про кнопку Play</li>
+          <li>О кнопке Play разумеется</li>
+        </random>
+      </template>
+    </category>
+  </topic>
+
+  <topic name="Volume">
+    <category>
+      <pattern>Подробнее</pattern>
+      <template>Кнопка Volume отвечает за громкость воспроизведения медиаматериала</template>
+    </category>
+
+    <category>
+      <pattern>_ подробнее</pattern>
+      <template>
+        <srai>Подробнее</srai>
+      </template>
+    </category>
+
+    <category>
+      <pattern>Подробнее *</pattern>
+      <template>
+        <srai>Подробнее</srai>
+      </template>
+    </category>
+
+    <category>
+      <pattern>_ подробнее *</pattern>
+      <template>
+        <srai>Подробнее</srai>
+      </template>
+    </category>
+
+    <category>
+      <pattern>Еще</pattern>
+      <template>
+        <random>
+          <li>Эта кнопка имеет форму мегафона</li>
+          <li>С помощью этой кнопки можно регулировать ползунок громкости</li>
+          <li>Впервые эта кнопка появилась на магнитофоне Philips</li>
+        </random>
+      </template>
+    </category>
+
+    <category>
+      <pattern>_ еще</pattern>
+      <template>
+        <srai>Еще</srai>
+      </template>
+    </category>
+
+    <category>
+      <pattern>Еще *</pattern>
+      <template>
+        <srai>Еще</srai>
+      </template>
+    </category>
+
+    <category>
+      <pattern>_ еще *</pattern>
+      <template>
+        <srai>Еще</srai>
+      </template>
+    </category>
+
+    <category>
+      <pattern>А о чем мы говорим</pattern>
+      <template>
+        <random>
+          <li>Ну разумеется мы говорим о кнопке Value</li>a
+          <li>Ну у вас и память... Мы говорим о кнопке Value</li>
+          <li>Мы про кнопку Value</li>
+        </random>
+      </template>
+    </category>  
+  </topic>
+
+  <topic name="Pause">
+    <category>
+      <pattern>Подробнее</pattern>
+      <template>Кнопка Pause отвечает за приостановку медиаматериала</template>
+    </category>
+
+    <category>
+      <pattern>_ подробнее</pattern>
+      <template>
+        <srai>Подробнее</srai>
+      </template>
+    </category>
+
+    <category>
+      <pattern>Подробнее *</pattern>
+      <template>
+        <srai>Подробнее</srai>
+      </template>
+    </category>
+
+    <category>
+      <pattern>_ подробнее *</pattern>
+      <template>
+        <srai>Подробнее</srai>
+      </template>
+    </category>
+
+    <category>
+      <pattern>Еще</pattern>
+      <template>
+        <random>
+          <li>Эта кнопка имеет форму двух параллельных палочек</li>
+          <li>Многие отмечали, что символ паузы напоминает обозначение разомкнутой связи на электрической схеме</li>
+          <li>Впервые эта кнопка появилась на магнитофоне Philips</li>
+        </random>
+      </template>
+    </category>
+
+    <category>
+      <pattern>_ еще</pattern>
+      <template>
+        <srai>Еще</srai>
+      </template>
+    </category>
+
+    <category>
+      <pattern>Еще *</pattern>
+      <template>
+        <srai>Еще</srai>
+      </template>
+    </category>
+
+    <category>
+      <pattern>_ еще *</pattern>
+      <template>
+        <srai>Еще</srai>
+      </template>
+    </category>
+
+    <category>
+      <pattern>А о чем мы говорим</pattern>
+      <template>
+        <random>
+          <li>Вы какой-то странный... Мы говорим о кнопке Pause</li>a
+          <li>Мы с вами говорим про кнопку Pause</li>
+          <li>О кнопке Pause...</li>
+        </random>
+      </template>
+    </category>
+  </topic>
+
+  <topic name="Next">
+    <category>
+      <pattern>Подробнее</pattern>
+      <template>Кнопка Next отвечает за запуск следующего медиаматериала</template>
+    </category>
+
+    <category>
+      <pattern>_ подробнее</pattern>
+      <template>
+        <srai>Подробнее</srai>
+      </template>
+    </category>
+
+    <category>
+      <pattern>Подробнее *</pattern>
+      <template>
+        <srai>Подробнее</srai>
+      </template>
+    </category>
+
+    <category>
+      <pattern>_ подробнее *</pattern>
+      <template>
+        <srai>Подробнее</srai>
+      </template>
+    </category>
+
+    <category>
+      <pattern>Еще</pattern>
+      <template>
+        <random>
+          <li>Эта кнопка имеет форму треугольника и палочки</li>
+          <li>На некоторых устройствах данная кнопка при зажатии позволяет перемотать медиаматериал вперед</li>
+          <li>Впервые эта кнопка появилась на магнитофоне Philips</li>
+        </random>
+      </template>
+    </category>
+
+    <category>
+      <pattern>_ еще</pattern>
+      <template>
+        <srai>Еще</srai>
+      </template>
+    </category>
+
+    <category>
+      <pattern>Еще *</pattern>
+      <template>
+        <srai>Еще</srai>
+      </template>
+    </category>
+
+    <category>
+      <pattern>_ еще *</pattern>
+      <template>
+        <srai>Еще</srai>
+      </template>
+    </category>
+
+    <category>
+      <pattern>А о чем мы говорим</pattern>
+      <template>
+        <random>
+          <li>Ну разумеется мы говорим о кнопке Next</li>a
+          <li>Ну у вас и память... Мы говорим о кнопке Next</li>
+          <li>Мы говорим про кнопку Next</li>
+        </random>
+      </template>
+    </category>
+  </topic>
+
+  <topic name="Prev">
+    <category>
+      <pattern>Подробнее</pattern>
+      <template>Кнопка Prev отвечает за запуск предыдущего медиаматериала</template>
+    </category>
+
+    <category>
+      <pattern>_ подробнее</pattern>
+      <template>
+        <srai>Подробнее</srai>
+      </template>
+    </category>
+
+    <category>
+      <pattern>Подробнее *</pattern>
+      <template>
+        <srai>Подробнее</srai>
+      </template>
+    </category>
+
+    <category>
+      <pattern>_ подробнее *</pattern>
+      <template>
+        <srai>Подробнее</srai>
+      </template>
+    </category>
+
+    <category>
+      <pattern>Еще</pattern>
+      <template>
+        <random>
+          <li>Эта кнопка имеет форму треугольника и палочки</li>
+          <li>На некоторых устройствах данная кнопка при зажатии позволяет перемотать медиаматериал вначало</li>
+          <li>Впервые эта кнопка появилась на магнитофоне Philips</li>
+        </random>
+      </template>
+    </category>
+
+    <category>
+      <pattern>_ еще</pattern>
+      <template>
+        <srai>Еще</srai>
+      </template>
+    </category>
+
+    <category>
+      <pattern>Еще *</pattern>
+      <template>
+        <srai>Еще</srai>
+      </template>
+    </category>
+
+    <category>
+      <pattern>_ еще *</pattern>
+      <template>
+        <srai>Еще</srai>
+      </template>
+    </category>
+
+    <category>
+      <pattern>А о чем мы говорим</pattern>
+      <template>
+        <random>
+          <li>Ну разумеется мы говорим о кнопке Prev</li>a
+          <li>Ну у вас и память... Мы говорим о кнопке Prev</li>
+          <li>Мы говорим про кнопку Prev</li>
+        </random>
+      </template>
+    </category>
+  </topic>
+
+  <topic name="Stop">
+    <category>
+      <pattern>Подробнее</pattern>
+      <template>Кнопка Stop отвечает за остановку медиаматериала</template>
+    </category>
+
+    <category>
+      <pattern>_ подробнее</pattern>
+      <template>
+        <srai>Подробнее</srai>
+      </template>
+    </category>
+
+    <category>
+      <pattern>Подробнее *</pattern>
+      <template>
+        <srai>Подробнее</srai>
+      </template>
+    </category>
+
+    <category>
+      <pattern>_ подробнее *</pattern>
+      <template>
+        <srai>Подробнее</srai>
+      </template>
+    </category>
+
+    <category>
+      <pattern>Еще</pattern>
+      <template>
+        <random>
+          <li>Эта кнопка имеет форму квадрата</li>
+          <li>Василий Кандинский говорил, что форма квадрата - это устойчивая, неподвижная форма</li>
+          <li>Впервые эта кнопка появилась на магнитофоне Philips</li>
+        </random>
+      </template>
+    </category>
+
+    <category>
+      <pattern>_ еще</pattern>
+      <template>
+        <srai>Еще</srai>
+      </template>
+    </category>
+
+    <category>
+      <pattern>Еще *</pattern>
+      <template>
+        <srai>Еще</srai>
+      </template>
+    </category>
+
+    <category>
+      <pattern>_ еще *</pattern>
+      <template>
+        <srai>Еще</srai>
+      </template>
+    </category>
+
+    <category>
+      <pattern>А о чем мы говорим</pattern>
+      <template>
+        <random>
+          <li>Ну разумеется мы говорим о кнопке Stop</li>a
+          <li>Ну у вас и память... Мы говорим о кнопке Stop</li>
+          <li>Мы про кнопку Stop</li>
+        </random>
+      </template>
+    </category>
+  </topic>
+  
+</aiml>
