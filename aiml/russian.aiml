@@ -21,6 +21,25 @@
       </random>
     </template>
   </category>
+  
+  <category>
+    <pattern>Как тебя зовут</pattern>
+    <template>Меня зовут SikoraFlyaginbot</template>
+  </category>
+
+  <category>
+    <pattern>Какое у тебя имя</pattern>
+    <template>
+      <srai>Как тебя зовут</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>Назови свое имя</pattern>
+    <template>
+      <srai>Как тебя зовут</srai>
+    </template>
+  </category>
 
   <category>
     <pattern>кто ты</pattern>
@@ -629,5 +648,6 @@
       </template>
     </category>
   </topic>
-  
+
+ 
 </aiml>
