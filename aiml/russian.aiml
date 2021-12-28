@@ -202,22 +202,57 @@
   </category>
   
   <category>
-    <pattern>Какие образы способна распознавать нейросеть</pattern>
+    <pattern>образы</pattern>
     <template>Нейросеть способна распознавать образы символов кнопок медиаплеера </template>
+  </category>
+  
+  <category>
+    <pattern>_ образы</pattern>
+    <template>
+      <srai>образы</srai>
+    </template>
   </category>
 
   <category>
-    <pattern>Какие есть кнопки у медиаплеера</pattern>
+    <pattern>образы *</pattern>
+    <template>
+      <srai>образы</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>_ образы *</pattern>
+    <template>
+      <srai>образы</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>кнопки</pattern>
     <template>Обычно при просмотре видео или прослушивании аудио есть кнопки Play, Pause, Stop, Volume, Next, Prev</template>
   </category>
 
   <category>
-    <pattern>А что за кнопки</pattern>
+    <pattern>_ кнопки *</pattern>
     <template>
-      <srai>Какие есть кнопки у медиаплеера</srai>
+      <srai>кнопки</srai>
     </template>
   </category>
-  
+
+  <category>
+    <pattern>_ кнопки</pattern>
+    <template>
+      <srai>кнопки</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>кнопки *</pattern>
+    <template>
+      <srai>кнопки</srai>
+    </template>
+  </category>
+ 
   <category>
     <pattern>Расскажи о кнопке *</pattern>
     <template>Кнопка <set name ="topic"><star/> - это кнопка медиаплеера</set></template>
