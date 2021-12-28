@@ -138,7 +138,7 @@
   </category>
   
   <category>
-    <pattern> Кто такой * </pattern>
+    <pattern>Кто такой * </pattern>
     <template>
       <srai> Кто такой <star/> </srai>
     </template>
@@ -146,18 +146,18 @@
 
   <category>
     <pattern>Хватит</pattern>
-    <template>Хорошо&#33; хотите поговорить о чем&#45;то еще&#63;</template>
+    <template>Хорошо! хотите поговорить о чем-то еще?</template>
   </category>
 
   <category>
     <pattern>Да</pattern>
-    <that>Хорошо&#33; хотите поговорить о чем&#45;то еще&#63;</that>
+    <that>Хорошо хотите поговорить о чем то еще</that>
     <template>Ура! Тогда спросите о чем-то</template>
   </category>
 
   <category>
     <pattern>Нет</pattern>
-    <that>Хорошо&#33; хотите поговорить о чем&#45;то еще&#63;</that>
+    <that>Хорошо хотите поговорить о чем то еще</that>
     <template>Чтож...Буду ждать...</template>
   </category>
 
