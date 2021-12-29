@@ -45,7 +45,7 @@
     <pattern>кто ты</pattern>
     <template>
       <random>
-        <li>Я бот, который скоро будет распознавать изображения, <get name="user-name" />!</li>
+        <li>Я бот, который распознает изображения, <get name="user-name" />!</li>
       </random>
     </template>
   </category>

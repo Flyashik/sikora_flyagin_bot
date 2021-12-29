@@ -32,11 +32,19 @@ namespace AIMLTGBot
             Username = client.GetMeAsync().Result.Username;
         }
 
+        
+
         async Task HandleUpdateMessageAsync(ITelegramBotClient botClient, Update update, CancellationToken cancellationToken)
         {
             var message = update.Message;
             var chatId = message.Chat.Id;
             var username = message.Chat.FirstName;
+
+            string pathdirectory = Directory.GetCurrentDirectory();
+            var info = new DirectoryInfo(pathdirectory);
+            info = info.Parent.Parent;
+            pathdirectory = info.FullName + "\\photos\\";
+
             if (message.Type == MessageType.Text)
             {
                 var messageText = update.Message.Text;
@@ -61,12 +69,19 @@ namespace AIMLTGBot
                 // Но вместо этого пошлём картинку назад
                 // Стрим помнит последнее место записи, мы же хотим теперь прочитать с самого начала
                 imageStream.Seek(0, 0);
-                await client.SendPhotoAsync(
-                    message.Chat.Id,
-                    imageStream,
-                    "Пока что я не знаю, что делать с картинками, так что держи обратно",
-                    cancellationToken: cancellationToken
-                );
+
+                var img = System.Drawing.Image.FromStream(imageStream);
+
+                System.Drawing.Bitmap bm = new System.Drawing.Bitmap(img);
+                Processor.ProcessImage(bm).Save(pathdirectory + "P1000016_0.jpg", System.Drawing.Imaging.ImageFormat.Jpeg);
+
+                StreamReader sr = new StreamReader(pathdirectory + "type.txt");
+                var str = sr.ReadLine();
+
+                client.SendTextMessageAsync(message.Chat.Id, Processor.GetNameFigure());
+
+                sr.Close();
+
                 return;
             }
             // Можно обрабатывать разные виды сообщений, просто для примера пробросим реакцию на них в AIML
